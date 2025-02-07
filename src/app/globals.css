@@ -2,20 +2,62 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Hide on mobile devices */
+.hide-on-mobile {
+  display: block;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.nav-menu {
+  display: flex;
+}
+
+.nav-item {
+  margin-right: 1rem;
+}
+
+/* Hamburger icon for mobile */
+.hamburger {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* Active class for mobile menu */
+.nav-menu.active {
+  display: block;
+}
+
+/* Mobile view styles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
   }
-}
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  .nav-menu {
+    display: none;
+  }
+
+  .nav-item.hide-on-mobile {
+    display: none;
+  }
+
+  .nav-menu.active {
+    display: flex;
+    flex-direction: column;
+    background-color: #333;
+    padding: 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+  }
+
+  .nav-item {
+    padding: 10px 0;
+    text-align: center;
+    color: white;
+    background-color: #444;
+    border-bottom: 1px solid #555;
+  }
 }
