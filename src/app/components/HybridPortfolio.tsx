@@ -1,12 +1,12 @@
 "use client"
 
 import React, { useState, useRef, useEffect } from 'react';
-import { Github, Linkedin, Instagram, Youtube } from 'lucide-react';
+import { Github, Linkedin, Youtube } from 'lucide-react';
 
 // Terminal Component
 const Terminal = ({ onCommand, visible }) => {
   const [inputValue, setInputValue] = useState('');
-  const [currentPath, setCurrentPath] = useState('~/ishaq-ansari');
+  const [currentPath] = useState('~/ishaq-ansari');
   const [history, setHistory] = useState([
     { type: 'system', content: 'Welcome to my portfolio. You can use the Terminal or GUI to explore my journey.' },
     { type: 'system', content: 'Type "help" to see available commands.' }
@@ -202,7 +202,7 @@ const Terminal = ({ onCommand, visible }) => {
                 </button>
               </li>
               <li style={{ paddingLeft: "50px" }}>
-                Type 'view', 'download', or 'print' to interact
+                Type &apos;view&apos;, &apos;download&apos;, or &apos;print&apos; to interact
               </li>
             </ul>
           </div>
@@ -868,7 +868,7 @@ const ContactPage = () => {
           <div className="p-4 bg-gray-700/50 rounded-lg">
             {status.submitted ? (
               <div className="text-green-400 p-4">
-                Message sent successfully! I'll get back to you soon.
+                Message sent successfully! I&apos;ll get back to you soon.
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
