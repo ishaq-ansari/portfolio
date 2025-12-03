@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useState, useRef, useEffect } from 'react';
-import { Github, Linkedin, Instagram } from 'lucide-react';
+import { Github, Linkedin, Instagram, Youtube } from 'lucide-react';
 
 // Terminal Component
 const Terminal = ({ onCommand, visible }) => {
@@ -35,11 +35,10 @@ const Terminal = ({ onCommand, visible }) => {
       type: 'system',
       content: (
         <div>
-          Decoding Identity...
           <ul>
-            <li style={{ paddingLeft: '50px' }}>→ Who I Am: CS enthusiast, Developer, Problem Solver</li>
-            <li style={{ paddingLeft: '50px' }}>→ What I Do: Web Development, Machine Learning, Algorithms</li>
-            <li style={{ paddingLeft: '50px' }}>→ Fun Fact: I love riddles and lame jokes."</li>
+            <li style={{ paddingLeft: '50px' }}>→ Hi👋, I am a Software Engineer.</li>
+            <li style={{ paddingLeft: '55px' }}> &nbsp;</li>
+            <li style={{ paddingLeft: '50px' }}>I also have hands-on experience Data and ML Engineering and Full-Stack Development. I design scalable data pipelines, build backend architectures, and develop ML-powered software solutions.</li>
           </ul>
         </div>
       )
@@ -48,11 +47,39 @@ const Terminal = ({ onCommand, visible }) => {
       type: 'system',
       content: (
         <div>
-          Decrypting Skills...
           <ul>
-            <li style={{ paddingLeft: '50px' }}>→ Python:         ██████████ 90%</li>
-            <li style={{ paddingLeft: '50px' }}>→ Machine Learning:████████   80%</li>
-            <li style={{ paddingLeft: '50px' }}>→ Data Analysis:  ██████     60%</li>
+            <li style={{ paddingLeft: '50px' }}>→ Programming Languages:</li>
+            <li style={{ paddingLeft: '70px' }}>Python:         ████████████ 95%</li>
+            <li style={{ paddingLeft: '70px' }}>JavaScript:█████████  80%</li>
+            <li style={{ paddingLeft: '70px' }}>Go:  ██████     50%</li>
+            <li style={{ paddingLeft: '55px' }}> &nbsp;</li>
+
+            <li style={{ paddingLeft: '50px' }}>→ Databases:</li>
+            <li style={{ paddingLeft: '70px' }}>SQL (MySQL, PostgreSQL):         ██████████ 90%</li>
+            <li style={{ paddingLeft: '70px' }}>NoSQL (MongoDB):█████████   80%</li>
+            <li style={{ paddingLeft: '55px' }}> &nbsp;</li>
+
+            <li style={{ paddingLeft: '50px' }}>→ Tools &amp; Platforms:</li>
+            <li style={{ paddingLeft: '70px' }}>Git &amp; GitHub:  ██████████ 90%</li>
+            <li style={{ paddingLeft: '70px' }}>Docker, k8s, Terraform, CI/CD Pipelines (GitHub Actions, Jenkins): ████████   80%</li>
+            <li style={{ paddingLeft: '70px' }}>AWS, GCP, Azure:  ███████   70%</li>
+            <li style={{ paddingLeft: '55px' }}> &nbsp;</li>
+
+            <li style={{ paddingLeft: '50px' }}>→ Development Concepts:</li>
+            <li style={{ paddingLeft: '70px' }}>OOP, RESTful APIs, SDLC, Agile, Data Structures &amp; Algorithms</li>
+            <li style={{ paddingLeft: '55px' }}> &nbsp;</li>
+
+            <li style={{ paddingLeft: '50px' }}>→ Testing &amp; Debugging:</li>
+            <li style={{ paddingLeft: '70px' }}>Unit Testing (PyTest / JUnit): ████████  70%</li>
+            <li style={{ paddingLeft: '70px' }}>Integration, E2E (Selenium): ██████    60%</li>
+            <li style={{ paddingLeft: '55px' }}> &nbsp;</li>
+
+            <li style={{ paddingLeft: '50px' }}>→ Soft Skills:</li>
+            <li style={{ paddingLeft: '70px' }}>Problem-Solving — creative &amp; analytical approach</li>
+            <li style={{ paddingLeft: '70px' }}>Communication — explain technical concepts clearly</li>
+            <li style={{ paddingLeft: '70px' }}>Teamwork — collaborate effectively in Agile environments</li>
+            <li style={{ paddingLeft: '70px' }}>Time Management — prioritize and deliver under deadlines</li>
+
           </ul>
         </div>
       )
@@ -61,7 +88,6 @@ const Terminal = ({ onCommand, visible }) => {
       type: 'system',
       content: (
         <div>
-          Scanning Project Repository...
           <ul>
             <li style={{ paddingLeft: '50px' }}>→ AI-Based Tissue Segmentation</li>
             <li style={{ paddingLeft: '70px' }}>An AI pipeline to automatically segment and quantify tissues</li>
@@ -70,7 +96,10 @@ const Terminal = ({ onCommand, visible }) => {
               <a href="https://github.com/ishaq-ansari/Ingrown-Tissue-Quantification" className="text-red-400 hover:underline focus:outline-none"> GitHub</a>
             </li>
             
-            <li style={{ paddingLeft: '50px' }}>→ Portfolio Website</li>
+            <li style={{ paddingLeft: '50px' }}> → Check my other projects on&nbsp;
+              <a href="https://github.com/ishaq-ansari" className="text-red-400 hover:underline focus:outline-none">GitHub</a>
+            </li>
+            {/* <li style={{ paddingLeft: '50px' }}>→ Portfolio Website</li>
             <li style={{ paddingLeft: '70px' }}>A hybrid terminal-GUI portfolio website built with</li>
             <li style={{ paddingLeft: '70px' }}>React and Tailwind CSS.</li>
             <li style={{ paddingLeft: '70px' }}>
@@ -90,7 +119,7 @@ const Terminal = ({ onCommand, visible }) => {
             <li style={{ paddingLeft: '70px' }}>
               <a href="https://snakegame-eosin-tau.vercel.app/" className="text-red-400 hover:underline focus:outline-none">Live Demo</a> |&nbsp;  
               <a href="https://github.com/ishaq-ansari/snake_game_web" className="text-red-400 hover:underline focus:outline-none">GitHub</a>
-            </li>
+            </li> */}
           </ul>
         </div>
       )
@@ -100,14 +129,13 @@ const Terminal = ({ onCommand, visible }) => {
       type: 'system',
       content: (
         <div>
-          Accessing Experience Timeline...
           <ul>
             <li style={{ paddingLeft: '50px' }}>→ Computational Microscopy Imaging Lab, UF</li>
-            <li style={{ paddingLeft: '70px' }}>Position: AI Research Intern</li>
+            <li style={{ paddingLeft: '70px' }}>Domain: AI Research </li>
             <li style={{ paddingLeft: '70px' }}>Duration: May 2024 - Aug 2024</li>
             <li style={{ paddingLeft: '50px' }}></li>
             <li style={{ paddingLeft: '50px' }}>→ Rutgers University</li>
-            <li style={{ paddingLeft: '70px' }}>Position: Data Science Intern</li>
+            <li style={{ paddingLeft: '70px' }}>Domain: Data and Software</li>
             <li style={{ paddingLeft: '70px' }}>Duration: May 2023 - Jul 2023</li>
           </ul>
         </div>
@@ -306,33 +334,20 @@ const AboutPage = () => {
           <div className="space-y-4">
             <div className="p-4 bg-gray-700/50 rounded-lg overflow-auto">
               <h3 className="text-green-400">Who I Am</h3>
-              <p>Researcher, Developer, Engineer, Explorer, and a Problem Solver</p>
-            </div>
-            <div className="p-4 bg-gray-700/50 rounded-lg">
-              <h3 className="text-green-400">#helpful_notHelpful Background</h3>
-              <p>I grew up in Nepal. I started my schooling later than usual 
-                because my village had no primary schools, which forced me to 
-                leave my home at an early age and move to the city to pursue my 
-                education. I was a bright student and therefore, I chose medical 
-                field to become a doctor, a well admired job by Nepalese parents. 
-                I moved to Kathmandu, capital city of Nepal. 
-                After high school, I came to United States and joined Caldwell 
-                University. Initially a biology major, I noticed that my friends studying 
-                computer science were better than me at problem-solving and 
-                thinking creatively. I added computer science as a second major.
-                Slowly, I realized that I enjoy problem solving and discovered that 
-                computer science is my calling. </p>
+              <p>Data & Software Engineer, ML Ops, Full-Stack Developer, and a Problem Solver</p>
             </div>
             <div className="p-4 bg-gray-700/50 rounded-lg">
               <h3 className="text-green-400">What I Do</h3>
-              <p>Now, I actively explore various research areas within the field. 
-                I learn. I identify gaps, seek solutions, and collaborate with 
-                friends to work on projects that bridge 
-                those gaps. Beyond research, I observe societal needs and will develop 
-                platforms that address real-world problems. I thrive on learning 
-                and love trying new things.</p>
+              <p>I design scalable data pipelines, build backend architectures, and develop ML-powered software solutions.
+              </p>
             </div>
-            <div className="p-4 bg-gray-700/50 rounded-lg">
+             <div className="p-4 bg-gray-700/50 rounded-lg">
+              <h3 className="text-green-400">Background</h3>
+              <p>I am from Nepal. I completed my high school from there and came to the United States for college.
+                I graduated `summa cum laude` from Caldwell University in Computer Science with 4.00 CGPA.
+              </p>
+            </div>
+            {/* <div className="p-4 bg-gray-700/50 rounded-lg">
               <h3 className="text-green-400">What I Have Done</h3>
               <p>The interdisciplinary knowledge I gained as double major has 
                 allowed me to combine biology with technology. Recently I 
@@ -346,7 +361,7 @@ const AboutPage = () => {
               <p>I love riddles and lame jokes. Try solving this: "I speak without a mouth, 
                 hear without ears. I have no body but come alive with wind. What am I?”
                <br />(Answer: _______! Let’s debate the answer over coffee ☕)</p>
-            </div>
+            </div> */}
           </div>
         )}
       </div>
@@ -630,14 +645,14 @@ const ExperiencesPage = () => {
             {/* Experience 1 */}
             <div className="p-4 bg-gray-700/50 rounded-lg">
               <h3 className="text-green-400">Computational Microscopy Imaging Lab, UF</h3>
-              <p className="text-gray-300 font-semibold">AI Research Intern</p>
-              <p className="text-gray-400 text-sm">May 2024 - Aug 2024</p>
+              <p className="text-gray-300 font-semibold">AI Research</p>
+              <p className="text-gray-400 text-sm">May 2024 - present</p>
               <ul className="list-disc list-inside text-gray-300 mt-2 space-y-2">
                 <li>
-                  Developed and optimized a CNN-based AI pipeline to automate tissue detection and quantification in histopathology images of cerebral aneurysms.
+                  Develop and optimized a CNN-based AI pipeline to automate tissue detection and quantification in histopathology images of cerebral aneurysms.
                 </li>
                 <li>
-                  Supported data-driven improvements in the treatment of cerebral aneurysms by providing accurate and efficient analysis tools.
+                  Support data-driven improvements in the treatment of cerebral aneurysms by providing accurate and efficient analysis tools.
                 </li>
               </ul>
             </div>
@@ -645,7 +660,7 @@ const ExperiencesPage = () => {
             {/* Experience 2 */}
             <div className="p-4 bg-gray-700/50 rounded-lg">
               <h3 className="text-green-400">Rutgers University</h3>
-              <p className="text-gray-300 font-semibold">Data Science Intern</p>
+              <p className="text-gray-300 font-semibold">Data and Software</p>
               <p className="text-gray-400 text-sm">May 2023 - July 2023</p>
               <ul className="list-disc list-inside text-gray-300 mt-2 space-y-2">
                 <li>
@@ -845,7 +860,7 @@ const HybridPortfolio = () => {
       {/* Top Navigation */}
       <nav className="bg-gray-800/50 backdrop-blur-sm border-b border-gray-700 fixed top-0 w-full z-10">
         <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
-          <h1 className="font-mono text-xl text-green-400">ishaq@ansari:~$</h1>
+          <h1 className="font-mono text-xl text-green-400">ishaq-ansari 👋</h1>
           <div className="flex space-x-6">
             {['Home', 'About', 'Skills', 'Projects', 'Experiences', 'Resume', 'Contact'].map(item => (
               <button
@@ -873,11 +888,11 @@ const HybridPortfolio = () => {
           {/* Left Sidebar - Quick Stats */}
           <div className="col-span-2 space-y-4">
             <div className="p-8 bg-gray-800/50 rounded-lg border border-gray-700">
-              <h2 className="text-green-400 font-mono mb-2">> Quick Stats</h2>
+              <h2 className="text-green-400 font-mono mb-2">> Overview</h2>
               <div className="space-y-2 text-sm">
-                <div>Projects: 4</div>
-                <div>Commits: 87</div>
-                <div>Experience: 2 years</div>
+                <div>Data & Software Engineer </div>
+                <div>Full-Stack Developer</div>
+                <div>New York, NY</div>
               </div>
             </div>
           </div>
@@ -917,13 +932,13 @@ const HybridPortfolio = () => {
                 <span>LinkedIn</span>
               </a>
               <a 
-                href="https://instagram.com/is.haq_ansari" // Replace with your Instagram URL
+                href="https://www.youtube.com/@BestorialOfficial" // Replace with your Instagram URL
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="flex items-center space-x-2 hover:text-green-400 transition-colors"
               >
-                <Instagram size={16} />
-                <span>Instagram</span>
+                <Youtube size={16} />
+                <span>YouTube</span>
               </a>
               </div>
             </div>
