@@ -380,83 +380,131 @@ const SkillsPage = () => {
 
   return (
     <div className="p-8 bg-gray-800/50 rounded-lg border border-gray-700">
-      <h2 className="text-green-400 font-mono mb-4">> Skills</h2>
+      <h2 className="text-green-400 font-mono mb-4">&gt; Skills</h2>
       <div className="space-y-4">
-        <div className="text-gray-300">
-          Decrypting Skills...
-        </div>
+        <div className="text-gray-300">Decrypting Skills...</div>
         {showContent && (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="p-4 bg-gray-700/50 rounded-lg">
               <h3 className="text-green-400">Python</h3>
               <div className="w-full bg-gray-600 rounded-full h-2.5 relative">
-                <div className="bg-green-400 h-2.5 rounded-full" style={{ width: '90%' }}></div>
-                <span className="absolute right-0 top-0 text-gray-100 text-xs">90%</span>
+                <div
+                  className="bg-green-400 h-2.5 rounded-full"
+                  style={{ width: "90%" }}
+                ></div>
+                <span className="absolute right-0 top-0 text-gray-100 text-xs">
+                  90%
+                </span>
               </div>
             </div>
             <div className="p-4 bg-gray-700/50 rounded-lg">
               <h3 className="text-green-400">Java</h3>
               <div className="w-full bg-gray-600 rounded-full h-2.5 relative">
-                <div className="bg-green-400 h-2.5 rounded-full" style={{ width: '75%' }}></div>
-                <span className="absolute right-0 top-0 text-gray-100 text-xs">75%</span>
+                <div
+                  className="bg-green-400 h-2.5 rounded-full"
+                  style={{ width: "75%" }}
+                ></div>
+                <span className="absolute right-0 top-0 text-gray-100 text-xs">
+                  75%
+                </span>
               </div>
             </div>
             <div className="p-4 bg-gray-700/50 rounded-lg">
               <h3 className="text-green-400">C++</h3>
               <div className="w-full bg-gray-600 rounded-full h-2.5 relative">
-                <div className="bg-green-400 h-2.5 rounded-full" style={{ width: '50%' }}></div>
-                <span className="absolute right-0 top-0 text-gray-100 text-xs">50%</span>
+                <div
+                  className="bg-green-400 h-2.5 rounded-full"
+                  style={{ width: "50%" }}
+                ></div>
+                <span className="absolute right-0 top-0 text-gray-100 text-xs">
+                  50%
+                </span>
               </div>
             </div>
             <div className="p-4 bg-gray-700/50 rounded-lg">
               <h3 className="text-green-400">JavaScript</h3>
               <div className="w-full bg-gray-600 rounded-full h-2.5 relative">
-                <div className="bg-green-400 h-2.5 rounded-full" style={{ width: '90%' }}></div>
-                <span className="absolute right-0 top-0 text-gray-100 text-xs">90%</span>
+                <div
+                  className="bg-green-400 h-2.5 rounded-full"
+                  style={{ width: "90%" }}
+                ></div>
+                <span className="absolute right-0 top-0 text-gray-100 text-xs">
+                  90%
+                </span>
               </div>
             </div>
             <div className="p-4 bg-gray-700/50 rounded-lg">
               <h3 className="text-green-400">React</h3>
               <div className="w-full bg-gray-600 rounded-full h-2.5 relative">
-                <div className="bg-green-400 h-2.5 rounded-full" style={{ width: '85%' }}></div>
-                <span className="absolute right-0 top-0 text-gray-100 text-xs">85%</span>
+                <div
+                  className="bg-green-400 h-2.5 rounded-full"
+                  style={{ width: "85%" }}
+                ></div>
+                <span className="absolute right-0 top-0 text-gray-100 text-xs">
+                  85%
+                </span>
               </div>
             </div>
             <div className="p-4 bg-gray-700/50 rounded-lg">
               <h3 className="text-green-400">Flask</h3>
               <div className="w-full bg-gray-600 rounded-full h-2.5 relative">
-                <div className="bg-green-400 h-2.5 rounded-full" style={{ width: '70%' }}></div>
-                <span className="absolute right-0 top-0 text-gray-100 text-xs">70%</span>
+                <div
+                  className="bg-green-400 h-2.5 rounded-full"
+                  style={{ width: "70%" }}
+                ></div>
+                <span className="absolute right-0 top-0 text-gray-100 text-xs">
+                  70%
+                </span>
               </div>
             </div>
-            
+
             {/* Data Science/AI */}
             <div className="p-4 bg-gray-700/50 rounded-lg">
               <h3 className="text-green-400">Machine Learning</h3>
               <div className="w-full bg-gray-600 rounded-full h-2.5 relative">
-                <div className="bg-green-400 h-2.5 rounded-full" style={{ width: '80%' }}></div>
-                <span className="absolute right-0 top-0 text-gray-100 text-xs">80%</span>
+                <div
+                  className="bg-green-400 h-2.5 rounded-full"
+                  style={{ width: "80%" }}
+                ></div>
+                <span className="absolute right-0 top-0 text-gray-100 text-xs">
+                  80%
+                </span>
               </div>
             </div>
             <div className="p-4 bg-gray-700/50 rounded-lg">
               <h3 className="text-green-400">TensorFlow</h3>
               <div className="w-full bg-gray-600 rounded-full h-2.5 relative">
-                <div className="bg-green-400 h-2.5 rounded-full" style={{ width: '75%' }}></div>
-                <span className="absolute right-0 top-0 text-gray-100 text-xs">75%</span>
+                <div
+                  className="bg-green-400 h-2.5 rounded-full"
+                  style={{ width: "75%" }}
+                ></div>
+                <span className="absolute right-0 top-0 text-gray-100 text-xs">
+                  75%
+                </span>
               </div>
             </div>
             <div className="p-4 bg-gray-700/50 rounded-lg">
               <h3 className="text-green-400">PyTorch</h3>
               <div className="w-full bg-gray-600 rounded-full h-2.5 relative">
-                <div className="bg-green-400 h-2.5 rounded-full" style={{ width: '70%' }}></div>
-                <span className="absolute right-0 top-0 text-gray-100 text-xs">70%</span>
+                <div
+                  className="bg-green-400 h-2.5 rounded-full"
+                  style={{ width: "70%" }}
+                ></div>
+                <span className="absolute right-0 top-0 text-gray-100 text-xs">
+                  70%
+                </span>
               </div>
             </div>
             <div className="p-4 bg-gray-700/50 rounded-lg">
               <h3 className="text-green-400">Data Analysis</h3>
               <div className="w-full bg-gray-600 rounded-full h-2.5 relative">
-                <div className="bg-green-400 h-2.5 rounded-full" style={{ width: '60%' }}></div>
-                <span className="absolute right-0 top-0 text-gray-100 text-xs">60%</span>
+                <div
+                  className="bg-green-400 h-2.5 rounded-full"
+                  style={{ width: "60%" }}
+                ></div>
+                <span className="absolute right-0 top-0 text-gray-100 text-xs">
+                  60%
+                </span>
               </div>
             </div>
 
@@ -464,29 +512,49 @@ const SkillsPage = () => {
             <div className="p-4 bg-gray-700/50 rounded-lg">
               <h3 className="text-green-400">AWS</h3>
               <div className="w-full bg-gray-600 rounded-full h-2.5 relative">
-                <div className="bg-green-400 h-2.5 rounded-full" style={{ width: '70%' }}></div>
-                <span className="absolute right-0 top-0 text-gray-100 text-xs">70%</span>
+                <div
+                  className="bg-green-400 h-2.5 rounded-full"
+                  style={{ width: "70%" }}
+                ></div>
+                <span className="absolute right-0 top-0 text-gray-100 text-xs">
+                  70%
+                </span>
               </div>
             </div>
             <div className="p-4 bg-gray-700/50 rounded-lg">
               <h3 className="text-green-400">Docker</h3>
               <div className="w-full bg-gray-600 rounded-full h-2.5 relative">
-                <div className="bg-green-400 h-2.5 rounded-full" style={{ width: '75%' }}></div>
-                <span className="absolute right-0 top-0 text-gray-100 text-xs">75%</span>
+                <div
+                  className="bg-green-400 h-2.5 rounded-full"
+                  style={{ width: "75%" }}
+                ></div>
+                <span className="absolute right-0 top-0 text-gray-100 text-xs">
+                  75%
+                </span>
               </div>
             </div>
             <div className="p-4 bg-gray-700/50 rounded-lg">
               <h3 className="text-green-400">SQL</h3>
               <div className="w-full bg-gray-600 rounded-full h-2.5 relative">
-                <div className="bg-green-400 h-2.5 rounded-full" style={{ width: '85%' }}></div>
-                <span className="absolute right-0 top-0 text-gray-100 text-xs">85%</span>
+                <div
+                  className="bg-green-400 h-2.5 rounded-full"
+                  style={{ width: "85%" }}
+                ></div>
+                <span className="absolute right-0 top-0 text-gray-100 text-xs">
+                  85%
+                </span>
               </div>
             </div>
             <div className="p-4 bg-gray-700/50 rounded-lg">
               <h3 className="text-green-400">Git & GitHub</h3>
               <div className="w-full bg-gray-600 rounded-full h-2.5 relative">
-                <div className="bg-green-400 h-2.5 rounded-full" style={{ width: '90%' }}></div>
-                <span className="absolute right-0 top-0 text-gray-100 text-xs">90%</span>
+                <div
+                  className="bg-green-400 h-2.5 rounded-full"
+                  style={{ width: "90%" }}
+                ></div>
+                <span className="absolute right-0 top-0 text-gray-100 text-xs">
+                  90%
+                </span>
               </div>
             </div>
           </div>
@@ -507,18 +575,17 @@ const ProjectsPage = () => {
 
   return (
     <div className="p-8 bg-gray-800/50 rounded-lg border border-gray-700">
-      <h2 className="text-green-400 font-mono mb-4">> Projects</h2>
+      <h2 className="text-green-400 font-mono mb-4">&gt; Projects</h2>
       <div className="space-y-4">
-        <div className="text-gray-300">
-          Unlocking Projects...
-        </div>
+        <div className="text-gray-300">Unlocking Projects...</div>
         {showContent && (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {/* Project 1 */}
             <div className="p-4 bg-gray-700/50 rounded-lg">
               <h3 className="text-green-400">AI-Based Tissue Segmentation</h3>
               <p className="text-gray-300 mb-4 ">
-                An AI pipeline to automatically segment and quantify tissues in cerebral aneurysms using deep learning.
+                An AI pipeline to automatically segment and quantify tissues in
+                cerebral aneurysms using deep learning.
               </p>
               <div className="flex space-x-4">
                 <a
@@ -544,7 +611,8 @@ const ProjectsPage = () => {
             <div className="p-4 bg-gray-700/50 rounded-lg">
               <h3 className="text-green-400">Portfolio Website</h3>
               <p className="text-gray-300 mb-4">
-                A hybrid terminal-GUI portfolio website built with React and Tailwind CSS.
+                A hybrid terminal-GUI portfolio website built with React and
+                Tailwind CSS.
               </p>
               <div className="flex space-x-4">
                 <a
@@ -570,7 +638,8 @@ const ProjectsPage = () => {
             <div className="p-4 bg-gray-700/50 rounded-lg">
               <h3 className="text-green-400">Organize Me</h3>
               <p className="text-gray-300 mb-4">
-                A full-stack task management app designed to help users organize their tasks and track progress.
+                A full-stack task management app designed to help users organize
+                their tasks and track progress.
               </p>
               <div className="flex space-x-4">
                 <a
@@ -596,7 +665,8 @@ const ProjectsPage = () => {
             <div className="p-4 bg-gray-700/50 rounded-lg">
               <h3 className="text-green-400">Snake Game</h3>
               <p className="text-gray-300 mb-4">
-                A simple snake game built with JavaScript and HTML5 Canvas, featuring smooth controls and an increasing difficulty level.
+                A simple snake game built with JavaScript and HTML5 Canvas,
+                featuring smooth controls and an increasing difficulty level.
               </p>
               <div className="flex space-x-4">
                 <a
@@ -635,24 +705,27 @@ const ExperiencesPage = () => {
 
   return (
     <div className="p-8 bg-gray-800/50 rounded-lg border border-gray-700 max-w-3xl mx-auto">
-      <h2 className="text-green-400 font-mono mb-4">> Experiences</h2>
+      <h2 className="text-green-400 font-mono mb-4">&gt; Experiences</h2>
       <div className="space-y-4">
-        <div className="text-gray-300">
-          Hacking into the past...
-        </div>
+        <div className="text-gray-300">Hacking into the past...</div>
         {showContent && (
           <div className="space-y-6">
             {/* Experience 1 */}
             <div className="p-4 bg-gray-700/50 rounded-lg">
-              <h3 className="text-green-400">Computational Microscopy Imaging Lab, UF</h3>
+              <h3 className="text-green-400">
+                Computational Microscopy Imaging Lab, UF
+              </h3>
               <p className="text-gray-300 font-semibold">AI Research</p>
               <p className="text-gray-400 text-sm">May 2024 - present</p>
               <ul className="list-disc list-inside text-gray-300 mt-2 space-y-2">
                 <li>
-                  Develop and optimized a CNN-based AI pipeline to automate tissue detection and quantification in histopathology images of cerebral aneurysms.
+                  Develop and optimized a CNN-based AI pipeline to automate
+                  tissue detection and quantification in histopathology images
+                  of cerebral aneurysms.
                 </li>
                 <li>
-                  Support data-driven improvements in the treatment of cerebral aneurysms by providing accurate and efficient analysis tools.
+                  Support data-driven improvements in the treatment of cerebral
+                  aneurysms by providing accurate and efficient analysis tools.
                 </li>
               </ul>
             </div>
@@ -664,10 +737,13 @@ const ExperiencesPage = () => {
               <p className="text-gray-400 text-sm">May 2023 - July 2023</p>
               <ul className="list-disc list-inside text-gray-300 mt-2 space-y-2">
                 <li>
-                  Collaborated with interdisciplinary researchers to process and analyze experimental data using R and image analysis tools such as ImageJ2 and Fiji.
+                  Collaborated with interdisciplinary researchers to process and
+                  analyze experimental data using R and image analysis tools
+                  such as ImageJ2 and Fiji.
                 </li>
                 <li>
-                  Extracted meaningful patterns and insights in neural circuit research to support ongoing studies.
+                  Extracted meaningful patterns and insights in neural circuit
+                  research to support ongoing studies.
                 </li>
               </ul>
             </div>
@@ -688,8 +764,10 @@ const ResumePage = () => {
   }, []);
 
   return (
-    <div className={`p-8 'bg-gray-800/50' : 'bg-white'} rounded-lg border 'border-gray-700' : 'border-gray-300'}`}>
-      <h2 className={`text-green-400 font-mono mb-4`}>> Resume</h2>
+    <div
+      className={`p-8 'bg-gray-800/50' : 'bg-white'} rounded-lg border 'border-gray-700' : 'border-gray-300'}`}
+    >
+      <h2 className={`text-green-400 font-mono mb-4`}>&gt; Resume</h2>
       <div className="space-y-4">
         <div className="text-gray-300">
           Loading Resume... Rendering Preview.
@@ -699,10 +777,10 @@ const ResumePage = () => {
           <div className="p-4 bg-gray-900 rounded-lg">
             <div>
               {/* PDF Viewer (GUI Mode) */}
-              <iframe 
-                src="/Resume.pdf" 
-                width="100%" 
-                height="1000px" 
+              <iframe
+                src="/Resume.pdf"
+                width="100%"
+                height="1000px"
                 title="Resume Preview"
               ></iframe>
             </div>
@@ -781,7 +859,7 @@ const ContactPage = () => {
 
   return (
     <div className="p-8 bg-gray-800/50 rounded-lg border border-gray-700">
-      <h2 className="text-green-400 font-mono mb-4">> Contact Me</h2>
+      <h2 className="text-green-400 font-mono mb-4">&gt; Contact Me</h2>
       <div className="space-y-4">
         <div className="text-gray-300">
           Hey, please fill the form below to get in touch with me.
@@ -819,16 +897,14 @@ const ContactPage = () => {
                   />
                 </div>
                 {status.info.error && (
-                  <div className="text-red-400">
-                    Error: {status.info.msg}
-                  </div>
+                  <div className="text-red-400">Error: {status.info.msg}</div>
                 )}
                 <button
                   type="submit"
                   disabled={status.submitting}
                   className="px-4 py-2 bg-green-400 text-gray-900 rounded hover:bg-green-500 transition-colors disabled:opacity-50"
                 >
-                  {status.submitting ? 'Sending...' : 'Send Message'}
+                  {status.submitting ? "Sending..." : "Send Message"}
                 </button>
               </form>
             )}
@@ -862,17 +938,25 @@ const HybridPortfolio = () => {
         <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
           <h1 className="font-mono text-xl text-green-400">ishaq-ansari 👋</h1>
           <div className="flex space-x-6">
-            {['Home', 'About', 'Skills', 'Projects', 'Experiences', 'Resume', 'Contact'].map(item => (
+            {[
+              "Home",
+              "About",
+              "Skills",
+              "Projects",
+              "Experiences",
+              "Resume",
+              "Contact",
+            ].map((item) => (
               <button
                 key={item}
                 onClick={() => {
                   setActiveSection(item.toLowerCase());
-                  setTerminalVisible(item.toLowerCase() === 'home');
+                  setTerminalVisible(item.toLowerCase() === "home");
                 }}
                 className={`px-3 py-1 rounded-md transition-colors ${
                   activeSection === item.toLowerCase()
-                    ? 'bg-green-500/20 text-green-400'
-                    : 'hover:bg-gray-700'
+                    ? "bg-green-500/20 text-green-400"
+                    : "hover:bg-gray-700"
                 }`}
               >
                 {item}
@@ -888,7 +972,7 @@ const HybridPortfolio = () => {
           {/* Left Sidebar - Quick Stats */}
           <div className="col-span-2 space-y-4">
             <div className="p-8 bg-gray-800/50 rounded-lg border border-gray-700">
-              <h2 className="text-green-400 font-mono mb-2">> Overview</h2>
+              <h2 className="text-green-400 font-mono mb-2">&gt; Overview</h2>
               <div className="space-y-2 text-sm">
                 <div>Data & Software Engineer </div>
                 <div>Full-Stack Developer</div>
@@ -899,47 +983,49 @@ const HybridPortfolio = () => {
 
           {/* Central Content */}
           <div className="col-span-8">
-            {terminalVisible && <Terminal onCommand={handleCommand} visible={terminalVisible} />}
-            {activeSection === 'about' && <AboutPage />}
-            {activeSection === 'skills' && <SkillsPage />}
-            {activeSection === 'projects' && <ProjectsPage />}
-            {activeSection === 'experiences' && <ExperiencesPage />}
-            {activeSection === 'resume' && <ResumePage />}
-            {activeSection === 'contact' && <ContactPage />}
+            {terminalVisible && (
+              <Terminal onCommand={handleCommand} visible={terminalVisible} />
+            )}
+            {activeSection === "about" && <AboutPage />}
+            {activeSection === "skills" && <SkillsPage />}
+            {activeSection === "projects" && <ProjectsPage />}
+            {activeSection === "experiences" && <ExperiencesPage />}
+            {activeSection === "resume" && <ResumePage />}
+            {activeSection === "contact" && <ContactPage />}
           </div>
 
           {/* Right Sidebar - Connect */}
           <div className="col-span-2 space-y-4">
             <div className="p-8 bg-gray-800/50 rounded-lg border border-gray-700">
-              <h2 className="text-green-400 font-mono mb-2">> Connect</h2>
+              <h2 className="text-green-400 font-mono mb-2">&gt; Connect</h2>
               <div className="flex flex-col space-y-3">
-              <a 
-                href="https://github.com/ishaq-ansari" // Replace with your GitHub URL
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="flex items-center space-x-2 hover:text-green-400 transition-colors"
-              >
-                <Github size={16} />
-                <span>GitHub</span>
-              </a>
-              <a 
-                href="https://linkedin.com/in/ishaq-ansari" // Replace with your LinkedIn URL
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="flex items-center space-x-2 hover:text-green-400 transition-colors"
-              >
-                <Linkedin size={16} />
-                <span>LinkedIn</span>
-              </a>
-              <a 
-                href="https://www.youtube.com/@BestorialOfficial" // Replace with your Instagram URL
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="flex items-center space-x-2 hover:text-green-400 transition-colors"
-              >
-                <Youtube size={16} />
-                <span>YouTube</span>
-              </a>
+                <a
+                  href="https://github.com/ishaq-ansari" // Replace with your GitHub URL
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center space-x-2 hover:text-green-400 transition-colors"
+                >
+                  <Github size={16} />
+                  <span>GitHub</span>
+                </a>
+                <a
+                  href="https://linkedin.com/in/ishaq-ansari" // Replace with your LinkedIn URL
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center space-x-2 hover:text-green-400 transition-colors"
+                >
+                  <Linkedin size={16} />
+                  <span>LinkedIn</span>
+                </a>
+                <a
+                  href="https://www.youtube.com/@BestorialOfficial" // Replace with your Instagram URL
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center space-x-2 hover:text-green-400 transition-colors"
+                >
+                  <Youtube size={16} />
+                  <span>YouTube</span>
+                </a>
               </div>
             </div>
           </div>
