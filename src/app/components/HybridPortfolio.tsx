@@ -325,7 +325,7 @@ const AboutPage = () => {
 
   return (
     <div className="p-8 bg-gray-800/50 rounded-lg border border-gray-700">
-      <h2 className="text-green-400 font-mono mb-4">> About Me</h2>
+      <h2 className="text-green-400 font-mono mb-4">&gt; About Me</h2>
       <div className="space-y-4">
         <div className="text-gray-300">
           Decoding Identity...
@@ -333,7 +333,7 @@ const AboutPage = () => {
         {showContent && (
           <div className="space-y-4">
             <div className="p-4 bg-gray-700/50 rounded-lg overflow-auto">
-              <h3 className="text-green-400">Who I Am</h3>
+              <h3 className="text-green-400">Who Am I</h3>
               <p>Data & Software Engineer, ML Ops, Full-Stack Developer, and a Problem Solver</p>
             </div>
             <div className="p-4 bg-gray-700/50 rounded-lg">
