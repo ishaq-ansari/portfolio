@@ -4,16 +4,23 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Github, Linkedin, Youtube } from 'lucide-react';
 
 // Terminal Component
-const Terminal = ({ onCommand, visible }) => {
+type TerminalProps = {
+  onCommand: (command: string, switchToGUI?: boolean) => void;
+  visible: boolean;
+};
+
+const Terminal = ({ onCommand, visible }: TerminalProps) => {
   const [inputValue, setInputValue] = useState('');
   const [currentPath] = useState('~/ishaq-ansari');
-  const [history, setHistory] = useState([
+  type HistoryEntry = { type: 'system' | 'command'; content: React.ReactNode };
+  const [history, setHistory] = useState<HistoryEntry[]>([
     { type: 'system', content: 'Welcome to my portfolio. You can use the Terminal or GUI to explore my journey.' },
     { type: 'system', content: 'Type "help" to see available commands.' }
   ]);
-  const bottomRef = useRef(null);
+  const bottomRef = useRef<HTMLDivElement | null>(null);
 
-  const commands = {
+  type CommandResponse = { type: 'system' | 'command'; content: React.ReactNode; handleResumeAction?: (action: string) => void } | null;
+  const commands: Record<string, () => CommandResponse> = {
     help: () => ({
       type: 'system',
       content: (
@@ -145,7 +152,7 @@ const Terminal = ({ onCommand, visible }) => {
     resume:() => {
       const resumePath = "/Resume.pdf"; // Corrected path
     
-      const handleResumeAction = (action) => {
+      const handleResumeAction = (action: string) => {
         switch (action.toLowerCase()) {
           case "view":
             window.open(resumePath, "_blank"); // Open in new tab
@@ -230,18 +237,21 @@ const Terminal = ({ onCommand, visible }) => {
     }
   };
 
-  const handleCommand = (command) => {
+  const handleCommand = (command: string) => {
     const trimmedCommand = command.trim().toLowerCase();
-    const newEntry = { type: "command", content: `${currentPath} $ ${command}` };
+    const newEntry: HistoryEntry = { type: "command", content: `${currentPath} $ ${command}` };
   
     // Directly handle resume actions without checking history
     if (["view", "download", "print"].includes(trimmedCommand)) {
-      commands.resume().handleResumeAction(trimmedCommand);
+      const resumeResp = commands.resume();
+      if (resumeResp && resumeResp.handleResumeAction) {
+        resumeResp.handleResumeAction(trimmedCommand);
+      }
       setHistory((prev) => [...prev, newEntry]);
       return;
     }
   
-    let response;
+    let response: CommandResponse;
     if (commands[trimmedCommand]) {
       response = commands[trimmedCommand]();
     } else {
@@ -251,12 +261,13 @@ const Terminal = ({ onCommand, visible }) => {
       };
     }
   
-    setHistory((prev) => [...prev, newEntry, ...(response ? [response] : [])]);
+    const responseEntry: HistoryEntry | null = response as HistoryEntry | null;
+    setHistory((prev) => [...prev, newEntry, ...(responseEntry ? [responseEntry] : [])]);
     onCommand(trimmedCommand, false); // Do not switch to GUI mode
   };
   
   // Capture "Enter" key event
-  const handleKeyPress = (e) => {
+  const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") {
       handleCommand(inputValue);
       setInputValue(""); // Clear input after execution
@@ -794,11 +805,12 @@ const ResumePage = () => {
 //Contact Page Component
 const ContactPage = () => {
   const [showContent, setShowContent] = useState(false);
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<{ email: string; message: string }>({
     email: '',
     message: ''
   });
-  const [status, setStatus] = useState({
+  type StatusType = { submitted: boolean; submitting: boolean; info: { error: boolean; msg: string | null } };
+  const [status, setStatus] = useState<StatusType>({
     submitted: false,
     submitting: false,
     info: { error: false, msg: null }
@@ -809,7 +821,7 @@ const ContactPage = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  const handleServerResponse = (ok, msg) => {
+  const handleServerResponse = (ok: boolean, msg: string) => {
     if (ok) {
       setStatus({
         submitted: true,
@@ -829,14 +841,14 @@ const ContactPage = () => {
     }
   };
 
-  const handleChange = e => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
 
-  const handleSubmit = async e => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus(prevStatus => ({ ...prevStatus, submitting: true }));
 
@@ -853,7 +865,8 @@ const ContactPage = () => {
       
       handleServerResponse(response.ok, 'Thank you, I will get back to you shortly.');
     } catch (error) {
-      handleServerResponse(false, error.message);
+      const errMsg = error instanceof Error ? error.message : String(error);
+      handleServerResponse(false, errMsg);
     }
   };
 
@@ -892,7 +905,7 @@ const ContactPage = () => {
                     value={formData.message}
                     onChange={handleChange}
                     className="w-full p-2 bg-gray-600 rounded text-gray-100 placeholder-gray-400"
-                    rows="4"
+                    rows={4}
                     disabled={status.submitting}
                   />
                 </div>
@@ -921,7 +934,7 @@ const HybridPortfolio = () => {
   const [activeSection, setActiveSection] = useState('home');
   const [terminalVisible, setTerminalVisible] = useState(true);
 
-  const handleCommand = (command, switchToGUI = true) => {
+  const handleCommand = (command: string, switchToGUI = true) => {
     if (command === 'home') {
       setActiveSection('home');
       setTerminalVisible(true);
