@@ -338,24 +338,31 @@ const AboutPage = () => {
     <div className="p-8 bg-gray-800/50 rounded-lg border border-gray-700">
       <h2 className="text-green-400 font-mono mb-4">&gt; About Me</h2>
       <div className="space-y-4">
-        <div className="text-gray-300">
-          Decoding Identity...
-        </div>
+        <div className="text-gray-300">Decoding Identity...</div>
         {showContent && (
           <div className="space-y-4">
             <div className="p-4 bg-gray-700/50 rounded-lg overflow-auto">
               <h3 className="text-green-400">Who Am I</h3>
-              <p>Data & Software Engineer, ML Ops, Full-Stack Developer, and a Problem Solver</p>
+              <p>
+                Systems & Software Engineer | A Problem Solver also proficient
+                in Machine Learning and Data Science
+              </p>
             </div>
             <div className="p-4 bg-gray-700/50 rounded-lg">
               <h3 className="text-green-400">What I Do</h3>
-              <p>I design scalable data pipelines, build backend architectures, and develop ML-powered software solutions.
+              <p>
+                I design and build scalable, high-performance software systems
+                and backend architectures, while also leveraging machine
+                learning and data science to deliver intelligent, data-driven
+                solutions.
               </p>
             </div>
-             <div className="p-4 bg-gray-700/50 rounded-lg">
+            <div className="p-4 bg-gray-700/50 rounded-lg">
               <h3 className="text-green-400">Background</h3>
-              <p>I am from Nepal. I completed my high school from there and came to the United States for college.
-                I graduated `summa cum laude` from Caldwell University in Computer Science with 4.00 CGPA.
+              <p>
+                I am from Nepal. I completed my high school from there and came
+                to the United States for college. I graduated `summa cum laude`
+                from Caldwell University in Computer Science with 4.00 CGPA.
               </p>
             </div>
             {/* <div className="p-4 bg-gray-700/50 rounded-lg">
@@ -806,14 +813,18 @@ const ResumePage = () => {
 const ContactPage = () => {
   const [showContent, setShowContent] = useState(false);
   const [formData, setFormData] = useState<{ email: string; message: string }>({
-    email: '',
-    message: ''
+    email: "",
+    message: "",
   });
-  type StatusType = { submitted: boolean; submitting: boolean; info: { error: boolean; msg: string | null } };
+  type StatusType = {
+    submitted: boolean;
+    submitting: boolean;
+    info: { error: boolean; msg: string | null };
+  };
   const [status, setStatus] = useState<StatusType>({
     submitted: false,
     submitting: false,
-    info: { error: false, msg: null }
+    info: { error: false, msg: null },
   });
 
   useEffect(() => {
@@ -826,44 +837,49 @@ const ContactPage = () => {
       setStatus({
         submitted: true,
         submitting: false,
-        info: { error: false, msg }
+        info: { error: false, msg },
       });
       setFormData({
-        email: '',
-        message: ''
+        email: "",
+        message: "",
       });
     } else {
       setStatus({
         submitted: false,
         submitting: false,
-        info: { error: true, msg }
+        info: { error: true, msg },
       });
     }
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setStatus(prevStatus => ({ ...prevStatus, submitting: true }));
+    setStatus((prevStatus) => ({ ...prevStatus, submitting: true }));
 
-    const endpoint = 'https://formspree.io/f/xldglgjn'; // Replace with your Formspree endpoint
+    const endpoint = "https://formspree.io/f/xldglgjn"; // Replace with your Formspree endpoint
 
     try {
       const response = await fetch(endpoint, {
-        method: 'POST',
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json'
+          "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData)
+        body: JSON.stringify(formData),
       });
-      
-      handleServerResponse(response.ok, 'Thank you, I will get back to you shortly.');
+
+      handleServerResponse(
+        response.ok,
+        "Thank you, I will get back to you shortly."
+      );
     } catch (error) {
       const errMsg = error instanceof Error ? error.message : String(error);
       handleServerResponse(false, errMsg);
@@ -928,15 +944,14 @@ const ContactPage = () => {
   );
 };
 
-
 // Main Portfolio Component
 const HybridPortfolio = () => {
-  const [activeSection, setActiveSection] = useState('home');
+  const [activeSection, setActiveSection] = useState("home");
   const [terminalVisible, setTerminalVisible] = useState(true);
 
   const handleCommand = (command: string, switchToGUI = true) => {
-    if (command === 'home') {
-      setActiveSection('home');
+    if (command === "home") {
+      setActiveSection("home");
       setTerminalVisible(true);
     } else if (switchToGUI) {
       setActiveSection(command);
@@ -987,8 +1002,8 @@ const HybridPortfolio = () => {
             <div className="p-8 bg-gray-800/50 rounded-lg border border-gray-700">
               <h2 className="text-green-400 font-mono mb-2">&gt; Overview</h2>
               <div className="space-y-2 text-sm">
-                <div>Data & Software Engineer </div>
-                <div>Full-Stack Developer</div>
+                <div>Systems & Software Engineer </div>
+                <div>Proficient in Machine Learning and Data Science</div>
                 <div>New York, NY</div>
               </div>
             </div>
